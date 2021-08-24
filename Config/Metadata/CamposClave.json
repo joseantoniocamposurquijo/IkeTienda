@@ -1,0 +1,11 @@
+{
+	"categorias" : "CaId",
+	"inventarios" : "InId",
+	"logs" : "LoId",
+	"pedidos" : "PeId",
+	"productos" : "PrId",
+	"roles" : "RoId",
+	"usuarios" : "UsAlias",
+	"ventas" : "VeId",
+	"infotarjeta" : "ItId"
+}

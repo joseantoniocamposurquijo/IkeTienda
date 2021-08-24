@@ -1,0 +1,29 @@
+.card-hover {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition-duration: 0.3s;
+}
+
+.card-hover:hover {
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.25);
+}
+
+.btn-carrito{
+	z-index: 100;
+}
+
+
+.card-category{
+	background-color: white;
+	transition-duration: 0.3s;
+}
+
+.card-category a{
+	text-decoration: none;
+	color: steelblue;
+}
+
+.card-category:hover{
+	background-color: rgba(0,0,0,0.05);
+	color: white;
+}

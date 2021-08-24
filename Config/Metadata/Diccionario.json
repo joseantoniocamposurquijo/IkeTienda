@@ -1,0 +1,382 @@
+{
+	"CaId" : {
+		"tabla" : "categorias",
+		"tipo" : "texto",
+		"longitud" : 3,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"CaDescripcion" : {
+		"tabla" : "categorias",
+		"tipo" : "texto",
+		"longitud" : 100,
+		"requerido" : true,
+		"comentario" : "Descripcion"
+	},
+	"CaIcono" : {
+		"tabla" : "categorias",
+		"tipo" : "texto",
+		"longitud" : 100,
+		"requerido" : true,
+		"comentario" : "Descripcion"
+	},
+	"created_at" : {
+		"tabla" : "categorias",
+		"tipo" : "fechahora",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Fecha creacion"
+	},
+	"InId" : {
+		"tabla" : "inventarios",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"InProductoId" : {
+		"tabla" : "inventarios",
+		"tipo" : "lista",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id Producto",
+		"lista" : {
+			"tabla" : "productos",
+			"clave" : "PrId",
+			"valor" : "PrNombre"
+		}
+	},
+	"InCantidad" : {
+		"tabla" : "inventarios",
+		"tipo" : "numerico",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Cantidad"
+	},
+	"LoId" : {
+		"tabla" : "logs",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"LoQueryType" : {
+		"tabla" : "logs",
+		"tipo" : "texto",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Tipo de query"
+	},
+	"LoTable" : {
+		"tabla" : "logs",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Tabla"
+	},
+	"LoUser" : {
+		"tabla" : "logs",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Usuario"
+	},
+	"LoQuery" : {
+		"tabla" : "logs",
+		"tipo" : "text",
+		"longitud" : 5000,
+		"requerido" : true,
+		"comentario" : "Query"
+	},
+	"LoValues" : {
+		"tabla" : "logs",
+		"tipo" : "text",
+		"longitud" : 5000,
+		"requerido" : true,
+		"comentario" : "Valores"
+	},
+	"LoIp" : {
+		"tabla" : "logs",
+		"tipo" : "long",
+		"longitud" : 5000,
+		"requerido" : true,
+		"comentario" : "Ip cliente"
+	},
+	"LoIp" : {
+		"tabla" : "logs",
+		"tipo" : "texto",
+		"longitud" : 5000,
+		"requerido" : true,
+		"comentario" : "Ip cliente"
+	},
+	"PeId" : {
+		"tabla" : "pedidos",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"PdVentaId" : {
+		"tabla" : "pedidos",
+		"tipo" : "lista",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id venta",
+		"lista" : {
+			"tabla" : "ventas",
+			"clave" : "VeId",
+			"valor" : "VeTotal"
+		}
+	},
+	"PeProductoId" : {
+		"tabla" : "pedidos",
+		"tipo" : "lista",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id producto",
+		"lista" : {
+			"tabla" : "productos",
+			"clave" : "PrId",
+			"valor" : "PrNombre"
+		}
+	},
+	"PePrecioUnitario" : {
+		"tabla" : "pedidos",
+		"tipo" : "moneda",
+		"longitud" : 20.2,
+		"requerido" : true,
+		"comentario" : "Precio unitario"
+	},
+	"PeCantidad" : {
+		"tabla" : "pedidos",
+		"tipo" : "numerico",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Cantidad"
+	},
+	"PrId" : {
+		"tabla" : "productos",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"PrNombre" : {
+		"tabla" : "productos",
+		"tipo" : "texto",
+		"longitud" : 255,
+		"requerido" : true,
+		"comentario" : "Nombre"
+	},
+	"PrPrecio" : {
+		"tabla" : "productos",
+		"tipo" : "moneda",
+		"longitud" : 20.2,
+		"requerido" : true,
+		"comentario" : "Precio"
+	},
+	"PrDescripcion" : {
+		"tabla" : "productos",
+		"tipo" : "texto",
+		"longitud" : 5000,
+		"requerido" : true,
+		"comentario" : "Descripcion"
+	},
+	"PrImagen" : {
+		"tabla" : "productos",
+		"tipo" : "imagen",
+		"longitud" : 1000,
+		"requerido" : true,
+		"comentario" : "Imagen"
+	},
+	"PrCategoria" : {
+		"tabla" : "productos",
+		"tipo" : "lista",
+		"longitud" : 3,
+		"requerido" : true,
+		"comentario" : "Categoria",
+		"lista" : {
+			"tabla" : "categorias",
+			"clave" : "CaId",
+			"valor" : "CaDescripcion"
+		}
+	},
+	"PrDescuento" : {
+		"tabla" : "productos",
+		"tipo" : "porcentaje",
+		"longitud" : 10.2,
+		"requerido" : true,
+		"comentario" : "Descuento"
+	},
+	"RoId" : {
+		"tabla" : "roles",
+		"tipo" : "clave",
+		"longitud" : 3,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"RoDescription" : {
+		"tabla" : "roles",
+		"tipo" : "texto",
+		"longitud" : 30,
+		"requerido" : true,
+		"comentario" : "Descripcion"
+	},
+	"UsAlias" : {
+		"tabla" : "usuarios",
+		"tipo" : "clave",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Alias"
+	},
+	"UsRol" : {
+		"tabla" : "usuarios",
+		"tipo" : "lista",
+		"longitud" : 3,
+		"requerido" : true,
+		"comentario" : "Rol",
+		"lista" : {
+			"tabla" : "roles",
+			"clave" : "RoId",
+			"valor" : "RoDescription"
+		}
+	},
+	"UsNombres" : {
+		"tabla" : "usuarios",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Nombres"
+	},
+	"UsApellidos" : {
+		"tabla" : "usuarios",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Apellidos"
+	},
+	"UsCorreo" : {
+		"tabla" : "usuarios",
+		"tipo" : "texto",
+		"longitud" : 255,
+		"requerido" : true,
+		"comentario" : "Correo"
+	},
+	"UsPassword" : {
+		"tabla" : "usuarios",
+		"tipo" : "password",
+		"longitud" : 130,
+		"requerido" : true,
+		"comentario" : "Password"
+	},
+	"UsTelefono" : {
+		"tabla" : "usuarios",
+		"tipo" : "texto",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Telefono"
+	},
+	"UsDireccion" : {
+		"tabla" : "usuarios",
+		"tipo" : "texto",
+		"longitud" : 255,
+		"requerido" : true,
+		"comentario" : "Direccion"
+	},
+	"VeId" : {
+		"tabla" : "ventas",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"VeUsuario" : {
+		"tabla" : "ventas",
+		"tipo" : "lista",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Usuario",
+		"lista" : {
+			"tabla" : "usuarios",
+			"clave" : "UsAlias",
+			"valor" : "UsNombres"
+		}
+	},
+	"VeClaveTransaccion" : {
+		"tabla" : "ventas",
+		"tipo" : "texto",
+		"longitud" : 255,
+		"requerido" : true,
+		"comentario" : "Clave transaccion"
+	},
+	"VePago" : {
+		"tabla" : "ventas",
+		"tipo" : "texto",
+		"longitud" : 10000,
+		"requerido" : true,
+		"comentario" : "Datos PayPal"
+	},
+	"VeFecha" : {
+		"tabla" : "ventas",
+		"tipo" : "fechahora",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Fecha de venta"
+	},
+	"VeTotal" : {
+		"tabla" : "ventas",
+		"tipo" : "moneda",
+		"longitud" : 20.2,
+		"requerido" : true,
+		"comentario" : "Total"
+	},
+	"VeStatus" : {
+		"tabla" : "ventas",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Estatus"
+	},
+	"ItId" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "auto",
+		"longitud" : 11,
+		"requerido" : true,
+		"comentario" : "Id"
+	},
+	"ItUsuario" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "texto",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Usuario"
+	},
+	"ItInputNumero" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "texto",
+		"longitud" : 50,
+		"requerido" : true,
+		"comentario" : "Numero tarjeta"
+	},
+	"ItMes" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "texto",
+		"longitud" : 10,
+		"requerido" : true,
+		"comentario" : "Mes"
+	},
+	"ItAnio" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "texto",
+		"longitud" : 20,
+		"requerido" : true,
+		"comentario" : "Año"
+	},
+	"ItInputCCV" : {
+		"tabla" : "infotarjeta",
+		"tipo" : "texto",
+		"longitud" : 3,
+		"requerido" : true,
+		"comentario" : "CCV"
+	}
+}

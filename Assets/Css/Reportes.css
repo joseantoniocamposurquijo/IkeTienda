@@ -1,0 +1,23 @@
+:root{
+	--primary: #111B54;
+	--light: #fff;
+	--grey: #efefef;
+}
+
+
+.bg-primary{background-color: var(--primary) !important;}
+.bg-light {background-color: var(--light) !important}
+.bg-grey {background-color: var(--grey) !important}
+
+.btn {border: 0;}
+.btn-primary {background-color: var(--primary)}
+.btn-primary:hover {background-color: var(--primary)}
+
+
+.card{
+	border-top: 1px solid var(--grey);
+}
+
+.stat{
+	border-right: 2px solid var(--grey);
+}
